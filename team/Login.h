@@ -17,3 +17,4 @@ string password;//пароль
 public:
 void Show_MainScreen(); // показать главное меню
 };
+#endif // FUNCS_H

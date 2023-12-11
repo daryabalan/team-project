@@ -46,7 +46,13 @@ OBJECTS_DIR   = debug
 SOURCES       = ..\team\main.cpp 
 OBJECTS       = debug/main.o
 
-DIST          =  class.h ..\team\main.cpp
+DIST          =  class.h \
+		Client.h \
+		ClientList.h \
+		YearlyReport.h \
+		Login.h \
+		operation.h \
+		BillDetails.h ..\team\main.cpp
 QMAKE_TARGET  = team
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = team.exe

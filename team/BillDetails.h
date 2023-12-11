@@ -13,13 +13,13 @@ class BillDetails
 {
 private:
     vector<Operation> operations; // Вектор операций
-
+    vector<Client> clients; //Вектор клиентов
 public:
     // Конструктор, принимающий номер карты, кредит, дебет и баланс
     BillDetails(string card, int credit, int debit, int balance);
 
     // Метод для получения даты операции
-    string getDate();
+    date getDate();
 
     // Метод для получения типа операции
     string getOperationType();
@@ -27,3 +27,4 @@ public:
     // Метод для получения количества бонусов
     int getQuantBonus();
 };
+#endif // FUNCS_H

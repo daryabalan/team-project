@@ -9,5 +9,10 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    class.h
-
+    class.h \
+    Client.h \
+    ClientList.h\
+    YearlyReport.h\
+    Login.h\
+    operation.h\
+    BillDetails.h\

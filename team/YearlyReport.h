@@ -46,3 +46,4 @@ public:
     // Метод для установки баланса на конец года
     void setYearEndBalance(int balance);
 };
+#endif // FUNCS_H
