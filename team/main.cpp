@@ -1,25 +1,31 @@
+//main.cpp()
 #include "Login.h"
-#include "BonusSystem.h"
 #include <iostream>
-#include <locale> // for setlocale
-using namespace std;
+//#include <locale>
 
-int main() {
-    //Функция setlocale() задаёт локализацию программы.
-    setlocale(LC_ALL, "rus");
-    Login login;
+int main() { //setlocale(LC_ALL, "rus");
+    Login loginSystem;
 
-    BonusSystem bonusSystem;
+    // Предположим, что у нас есть заданный id и пароль администратора
+    string adminId = "111";
+    string adminPassword = "1111";
 
-    // вход
-    login.showLoginMenu();
+    // Ввод данных от пользователя
+    cout << "Enter your id: ";
+    string enteredId;
+    cin >> enteredId;
 
-    // Если пароль верный-вывести меню
-    if (login.validateUserCredentials()) {
-        cout << "Вы успешно вошли в систему!\n";
-        bonusSystem.showMainScreen();
+    cout << "Enter your password: ";
+    string enteredPassword;
+    cin >> enteredPassword;
+
+    // Проверка введенных данных
+    if (enteredId == adminId && enteredPassword == adminPassword) {
+        // Если данные правильные, показываем главное меню
+        loginSystem.ShowMainScreen();
     } else {
-        cout << "Неверный пароль. Вход в систему запрещен.\n";
+        // В противном случае выводим сообщение об ошибке
+        cout << "Error! Check your id and password if it write correcly\n";
     }
 
     return 0;
