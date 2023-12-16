@@ -3,7 +3,9 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    login.cpp \
+    bonussystem.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -16,3 +18,4 @@ HEADERS += \
     Login.h\
     operation.h\
     BillDetails.h\
+    BonusSystem.h\

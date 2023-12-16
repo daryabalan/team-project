@@ -15,6 +15,8 @@ private:
 string admin_id;//логин
 string password;//пароль
 public:
-void Show_MainScreen(); // показать главное меню
+bool validateUserCredentials();//проверка пароля
+void showLoginMenu();//метод проверки ввода пароля
+void ShowMainScreen();//метод обращения к меню бонусной системы
 };
 #endif // FUNCS_H

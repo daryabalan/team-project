@@ -1,10 +1,22 @@
-#include <iostream>
+#include "BonusSystem.h"
+#include "Login.h"
 
-using namespace std;
+int main() {
+    //Функция setlocale() задаёт локализацию программы.
+    setlocale(LC_ALL, "rus");
+    Login log;
+    BonusSystem bonusSystem;
 
-int main()
-{
-    cout << "Hello World!" << endl;
+    // вход
+    log.showLoginMenu();
+
+    // Если пароль верный-вывести меню
+    if (log.validateUserCredentials()) {
+        cout << "Вы успешно вошли в систему!\n";
+        bonusSystem.showMainScreen();
+    } else {
+        cout << "Неверный пароль. Вход в систему запрещен.\n";
+    }
+
     return 0;
 }
-

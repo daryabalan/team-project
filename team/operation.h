@@ -21,10 +21,10 @@ public:
     Operation(string card, string operationType, int quantBonus);
 
     // Метод для получения даты операции
-    string getDate();
+    date getDate();
 
     // Метод для установки даты операции
-    void setDate(string date);
+    void setDate(date date);
 
     // Метод для вывода деталей операции
     void operation_details();
