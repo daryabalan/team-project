@@ -8,7 +8,6 @@ int main() {
     //Функция setlocale() задаёт локализацию программы.
     setlocale(LC_ALL, "rus");
     Login login;
-
     BonusSystem bonusSystem;
 
     // вход

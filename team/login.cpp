@@ -19,7 +19,7 @@ void Login::showLoginMenu() {
         if (validateUserCredentials())
         {
             // Если логин и пароль верны, выводим главное меню
-            log.Show_MainScreen();
+            login.ShowMainScreen();
         }
         else
         {
@@ -66,7 +66,7 @@ void Login::ShowMainScreen() {
            bonusSystem.registerNewCard(lastName, firstName, phoneNumber);
 
            // Возвращаемся в главное меню
-           Show_MainScreen();
+           ShowMainScreen();
            break;
        case 2:
            // Запрашиваем данные для начисления бонусов
@@ -81,7 +81,7 @@ void Login::ShowMainScreen() {
            bonusSystem.accrueBonus(cardNumber, bonus);
 
            // Возвращаемся в главное меню
-           Show_MainScreen();
+           ShowMainScreen();
            break;
        case 3:
            // Запрашиваем данные для списания бонусов
@@ -94,7 +94,7 @@ void Login::ShowMainScreen() {
            bonusSystem.debitBonus(cardNumber, bonus);
 
            // Возвращаемся в главное меню
-           Show_MainScreen();
+           ShowMainScreen();
            break;
        case 4:
            // Запрашиваем данные для генерации годового отчета
@@ -105,7 +105,7 @@ void Login::ShowMainScreen() {
            bonusSystem.generateYearlyReport(cardNumber);
 
            // Возвращаемся в главное меню
-           Show_MainScreen();
+           ShowMainScreen();
            break;
        case 5:
            // Запрашиваем данные для просмотра баланса
@@ -118,21 +118,21 @@ void Login::ShowMainScreen() {
                    cout << "Баланс по карте " << cardNumber << " составляет " << balance << " бонусов.\n";
 
                    // Возвращаемся в главное меню
-                   Show_MainScreen();
+                   ShowMainScreen();
                    break;
                case 6:
                    // Отображаем таблицу годовых отчетов
                    bonusSystem.displayYearlyReportsTable();
 
                    // Возвращаемся в главное меню
-                   Show_MainScreen();
+                   ShowMainScreen();
                    break;
                case 7:
                    // Отображаем таблицу деталей счета
                    bonusSystem.displayBillDetailsTable();
 
                    // Возвращаемся в главное меню
-                   Show_MainScreen();
+                   ShowMainScreen();
                    break;
                case 8:
                    // Выходим из программы
@@ -142,14 +142,14 @@ void Login::ShowMainScreen() {
                default:
                    // Выводим сообщение об ошибке и повторяем ввод
                    cout << "Неверный выбор. Попробуйте еще раз.\n";
-                   Show_MainScreen();
+                   ShowMainScreen();
                    break;
                }
            }
 
 bool validateUserCredentials() {//функция проверки введённых данных
 
-    if (password == "123"&&admin_id=="Dasha") {
+    if (password == "123"&& admin_id=="Dasha") {
         return true;
     } else {
         return false;
