@@ -1,8 +1,9 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _YEARLYREPORT_H_
+#define _YEARLYREPORT_H_
 #include <iostream>
 #include <vector>
 #include <list>
+#include "operation.h"
 #include <string>
 #include <numeric> //для accumulate()
 using namespace std;

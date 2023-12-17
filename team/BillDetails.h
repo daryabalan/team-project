@@ -1,8 +1,10 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _BILLDETAILS_H_
+#define _BILLDETAILS_H_
 #include <iostream>
 #include <vector>
 #include <list>
+#include "operation.h"
+#include "Client.h"
 #include <string>
 #include <numeric> //для accumulate()
 using namespace std;
@@ -19,7 +21,7 @@ public:
     BillDetails(string card, int credit, int debit, int balance);
 
     // Метод для получения даты операции
-    date getDate();
+    tm getDate();
 
     // Метод для получения типа операции
     string getOperationType();

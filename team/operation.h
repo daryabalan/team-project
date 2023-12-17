@@ -1,9 +1,10 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _OPERATION_H_
+#define _OPERATION_H_
 #include <iostream>
 #include <vector>
 #include <list>
 #include <string>
+#include <ctime>
 #include <numeric> //для accumulate()
 using namespace std;
 ///////////////////класс Operation(операции)////////////////////////
@@ -14,17 +15,17 @@ private:
     string cardNumber; // Номер карты
     string operationType; // Тип операции
     int quantBonus; // Количество бонусов
-    string date; // Дата операции
+    tm date; // Дата операции
 
 public:
     // Конструктор, принимающий номер карты, тип операции и количество бонусов
     Operation(string card, string operationType, int quantBonus);
 
     // Метод для получения даты операции
-    date getDate();
+    tm getDate();
 
     // Метод для установки даты операции
-    void setDate(date date);
+    void setDate(tm date);
 
     // Метод для вывода деталей операции
     void operation_details();

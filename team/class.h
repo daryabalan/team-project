@@ -1,5 +1,5 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _CLASS_H_
+#define _CLASS_H_
 #include <iostream>
 #include <vector>
 #include <list>

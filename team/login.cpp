@@ -1,5 +1,6 @@
 #include "Login.h"
 #include <iostream>
+#include "client.h"
 //#include <locale>
 using namespace std;
 
@@ -28,13 +29,6 @@ void Login::ShowMainScreen() { //setlocale(LC_ALL, "rus");
        {
        case 1:
            // Запрашиваем данные для регистрации новой карты
-           string lastName, firstName, phoneNumber;
-           cout << "Enter last name: ";
-           cin >> lastName;
-           cout << "Enter your name: ";
-           cin >> firstName;
-           cout << "Enter your phone number: ";
-           cin >> phoneNumber;
 
            // Регистрируем новую карту
            //bonusSystem.registerNewCard(lastName, firstName, phoneNumber);
@@ -46,5 +40,10 @@ void Login::ShowMainScreen() { //setlocale(LC_ALL, "rus");
 
 
 }
+}
+
+void Login::SetSysRef(BonusSystem* ref)
+{
+  sysref = ref;
 }
 

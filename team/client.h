@@ -1,9 +1,14 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _CLIENT_H_
+#define _CLIENT_H_
 #include <iostream>
 #include <vector>
 #include <list>
 #include <string>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <ctime>
 #include <numeric> //для accumulate()
 using namespace std;
 
@@ -21,7 +26,7 @@ private:
 public:
     // Конструктор, инициализирующий фамилию, имя, номер телефона, номер карты и начальный баланс
     Client(string last, string first, string phone, string card, int balance)
-        : last_name(last), first_name(first), phone_number(phone), card_number(card), balance(balance) {}
+        {last_name = last; first_name = first; phone_number = phone; card_number = card; balance = balance;}
 
     // Деструктор класса
     ~Client() {}
@@ -44,6 +49,8 @@ public:
 
     // Методы доступа к балансу и установки баланса бонусов клиента
     int getBalance();
+    //Метод генерации номера карты
+
     void setBalance(int balance);
 };
 #endif // FUNCS_H

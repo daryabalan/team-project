@@ -1,7 +1,8 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _CLIENTLIST_H_
+#define _CLIENTLIST_H_
 #include <iostream>
 #include <vector>
+#include "Client.h"
 #include <list>
 #include <string>
 #include <numeric> //для accumulate()

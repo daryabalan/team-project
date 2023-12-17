@@ -1,8 +1,16 @@
-#ifndef FUNCS_H
-#define FUNCS_H
+#ifndef _BONUSYSTEM_H_
+#define _BONUSYSTEM_H_
 #include <iostream>
 #include <vector>
 #include <list>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include "BillDetails.h"
+#include "ClientList.h"
+#include "YearlyReport.h"
+#include <ctime>
 #include <string>
 #include <numeric> //для accumulate()
 using namespace std;
@@ -12,9 +20,7 @@ class BonusSystem
 private:
     vector<YearlyReport>yearlyReports; // Вектор годовых отчетов
     vector<BillDetails>Clients; // Вектор деталей счета
-    vector<ClientList>ClientList; //Вектор списка клиентов
-    string admin_id;//логин
-    string password;//пароль
+    vector<ClientList>ClientLists; //Вектор списка клиентов
 public:
 
     // Метод для регистрации новой карты
@@ -43,9 +49,6 @@ public:
 
     // Метод для отображения таблицы деталей счета
     void displayBillDetailsTable();
-
-    // Метод для отображения главного экрана
-    void ShowMainScreen();
 
     // Метод для получения входных данных
     void getLogin();
