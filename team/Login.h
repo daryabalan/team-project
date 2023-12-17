@@ -15,7 +15,6 @@ private:
 string admin_id;//логин
 string password;//пароль
 public:
-bool validateUserCredentials();//проверка пароля
 void showLoginMenu();//метод проверки ввода пароля
 void ShowMainScreen();//метод обращения к меню бонусной системы
 };

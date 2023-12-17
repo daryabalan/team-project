@@ -13,8 +13,10 @@ private:
     vector<YearlyReport>yearlyReports; // Вектор годовых отчетов
     vector<BillDetails>Clients; // Вектор деталей счета
     vector<ClientList>ClientList; //Вектор списка клиентов
-
+    string admin_id;//логин
+    string password;//пароль
 public:
+
     // Метод для регистрации новой карты
     void registerNewCard(string lastName, string firstName, string phoneNumber);
 
@@ -22,7 +24,7 @@ public:
     string generateCardNumber();
 
     // Метод для отображения экрана входа в систему
-    void showLoginScreen();
+    void showLoginMenu();//метод проверки ввода пароля
 
     // Метод для начисления бонусов
     void accrueBonus(string cardNumber, int bonus);
@@ -43,7 +45,7 @@ public:
     void displayBillDetailsTable();
 
     // Метод для отображения главного экрана
-    void showMainScreen();
+    void ShowMainScreen();
 
     // Метод для получения входных данных
     void getLogin();

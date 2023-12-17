@@ -4,7 +4,7 @@
 //#include <locale>
 
 int main() { //setlocale(LC_ALL, "rus");
-    Login loginSystem;
+    Login login;
 
     // Предположим, что у нас есть заданный id и пароль администратора
     string adminId = "111";
@@ -22,7 +22,7 @@ int main() { //setlocale(LC_ALL, "rus");
     // Проверка введенных данных
     if (enteredId == adminId && enteredPassword == adminPassword) {
         // Если данные правильные, показываем главное меню
-        loginSystem.ShowMainScreen();
+        login.ShowMainScreen();
     } else {
         // В противном случае выводим сообщение об ошибке
         cout << "Error! Check your id and password if it write correcly\n";

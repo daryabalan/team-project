@@ -4,8 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    login.cpp \
-    bonussystem.cpp
+    login.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
