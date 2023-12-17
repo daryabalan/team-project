@@ -40,10 +40,9 @@ void Login::ShowMainScreen() { //setlocale(LC_ALL, "rus");
            //bonusSystem.registerNewCard(lastName, firstName, phoneNumber);
 
            // Возвращаемся в главное меню
-           ShowMainScreen();
+           //ShowMainScreen();
            break;
 
-
-                                  }
+}
 }
 
