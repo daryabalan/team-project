@@ -13,14 +13,14 @@ using namespace std;
 class ClientList
 {
 private:
-vector<Client> clients; // Вектор для хранения клиентов
+vector<Client*> clients; // Вектор для хранения клиентов
 public:
 
     // Деструктор
     ~ClientList();
 
     // Метод для добавления нового клиента в список
-    void addClient(Client newClient);
+    void addClient(Client* newClient);
 
     // Метод для удаления клиента из списка по номеру карты
     void deleteClientByCardNumber(string cardNumber);

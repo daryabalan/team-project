@@ -1,6 +1,6 @@
-#include "ClientList.h"
+/*#include "ClientList.h"
 #include "BonusSystem.h"
-void ClientList::addClient(Client newClient){
+void ClientList::addClient(Client* newClient){
   cout << "Enter client's last name: ";
   string lastname;
   cin >> lastname;
@@ -13,5 +13,5 @@ void ClientList::addClient(Client newClient){
   cout << "Enter client's balance: ";
   int balance;
   cin >> balance;
-  clients.push_back(new Client(lastname, firstname, phone_number, , balance));
-}
+  clients.push_back(new Client(lastname, firstname, phone_number, balance));
+}*/

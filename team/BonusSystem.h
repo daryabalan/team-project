@@ -8,7 +8,7 @@
 #include <string>
 #include <sstream>
 #include "BillDetails.h"
-#include "ClientList.h"
+//#include "ClientList.h"
 #include "YearlyReport.h"
 #include <ctime>
 #include <string>
@@ -20,14 +20,14 @@ class BonusSystem
 private:
     vector<YearlyReport>yearlyReports; // Вектор годовых отчетов
     vector<BillDetails>Clients; // Вектор деталей счета
-    vector<ClientList>ClientLists; //Вектор списка клиентов
+   // vector<ClientList>ClientLists; //Вектор списка клиентов
 public:
 
     // Метод для регистрации новой карты
     void registerNewCard(string lastName, string firstName, string phoneNumber);
 
     // Метод для генерации номера карты
-    string generateCardNumber();
+    //string generateCardNumber();
 
     // Метод для отображения экрана входа в систему
     void showLoginMenu();//метод проверки ввода пароля
@@ -52,6 +52,8 @@ public:
 
     // Метод для получения входных данных
     void getLogin();
+
+    std::string generateCardNumber();
 };
 
 #endif // FUNCS_H
