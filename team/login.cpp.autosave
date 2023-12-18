@@ -36,7 +36,6 @@ void Login::ShowMainScreen() {
         newClient.setFullName(firstName); // Устанавливаем имя клиента
         newClient.setPhoneNumber(phoneNumber); // Устанавливаем номер телефона клиента
         newClient.generateCardNumber(); // Генерируем номер карты
-        //newClient.setBalance(balance); //
         newClient.balance=0.0f;
 
         newClient.saveToFile(); // Сохраняем данные клиента в файл

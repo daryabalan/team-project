@@ -21,12 +21,14 @@ void Client::generateCardNumber() {
     cardNumber = ss.str();
 }
 
+
 void Client::saveToFile() {
     std::ofstream file("C:\\TeamProgect\\clients.txt", std::ios::app); // Указываем полный путь к файлу
     if (file.is_open()) {
         // Запись данных в файл
         file << "Full Name: " << fullName << "\n";
         file << "Phone Number: " << phoneNumber << "\n";
+        file << "Bonus balance: " <<balance<< "\n";
         file << "Card Number: " << cardNumber << "\n";
         file << "--------------------------\n";
         file.close();  // Закрытие файла после записи
