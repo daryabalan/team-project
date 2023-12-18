@@ -1,56 +1,26 @@
-#ifndef _CLIENT_H_
-#define _CLIENT_H_
-#include <iostream>
-#include <vector>
-#include <list>
-#include <string>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <ctime>
-#include <numeric> //для accumulate()
-using namespace std;
+#ifndef CLIENT_H
+#define CLIENT_H
 
-//////////////////// класс Client (клиенты) //////////////////
-//Он хранит Фамилию, Имя, номер телефона, номер карты, баланс карты клиента.
-class Client
-{
-private:
-    string first_name; // имя клиента
-    string last_name; // фамилия клиента
-    string phone_number; //номер телефона
-    string card_number; //номер карты
-    int balance; //баланс бонусов
+#include <string>
 
+class Client {
 public:
-    // Конструктор, инициализирующий фамилию, имя, номер телефона, номер карты и начальный баланс
-    Client(string last, string first, string phone, string card, int balance)
-        {last_name = last; first_name = first; phone_number = phone; card_number = card; balance = balance;}
+    std::string fullName;
+    std::string phoneNumber;
+    std::string cardNumber;
 
-    // Деструктор класса
-    ~Client() {}
-
-    // Методы доступа к фамилии и установки фамилии клиента
-    string getLastName();
-    void setLastName(string last);
-
-    // Методы доступа к имени и установки имени клиента
-    string getFirstName();
-    void setFirstName(string first);
-
-    // Методы доступа к номеру телефона и установки номера телефона клиента
-    string getPhoneNumber();
-    void setPhoneNumber(string phone);
-
-    // Методы доступа к номеру карты и установки номера карты клиента
-    string getCardNumber();
-    void setCardNumber(string card);
-
-    // Методы доступа к балансу и установки баланса бонусов клиента
-    int getBalance();
-    //Метод генерации номера карты
-
-    void setBalance(int balance);
+    void generateCardNumber();
+    void saveToFile();
+    void setFullName(const std::string& name);
+    void setPhoneNumber(const std::string& number);
 };
-#endif // FUNCS_H
+#endif
+
+
+
+
+
+
+
+
+
