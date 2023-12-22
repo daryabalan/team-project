@@ -5,6 +5,7 @@
 #include <list>
 #include <string>
 #include <ctime>
+#include "Client.h"
 #include <numeric> //для accumulate()
 using namespace std;
 ///////////////////класс Operation(операции)////////////////////////
@@ -15,9 +16,12 @@ private:
     string cardNumber; // Номер карты
     string operationType; // Тип операции
     int quantBonus; // Количество бонусов
+    int CurrentBalance; //Текущий баланс
     tm date; // Дата операции
 
 public:
+    float balance;
+
     // Конструктор, принимающий номер карты, тип операции и количество бонусов
     Operation(string card, string operationType, int quantBonus);
 
@@ -33,9 +37,6 @@ public:
     // Метод для проведения транзакции
     void transaction_operation();
 
-    // Метод для получения номера карты
-    string getCardNumber();
-
     // Метод для установки номера карты
     void setCardNumber(string card);
 
@@ -50,6 +51,15 @@ public:
 
     // Метод для установки количества бонусов
     void setQuantBonus(int bonus);
+
+    std::string getCardNumber() const {
+           return cardNumber;
+       }
+
+       float getBalance() const {
+           return balance;
+       }
+     void writeToFile(const std::string& cardNumber, const std::string& operationType, int quantBonus, float currentBalance, const Client& client, float amount);
 };
 
 #endif // FUNCS_H

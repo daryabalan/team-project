@@ -52,6 +52,9 @@ public:
 
     // Метод для получения входных данных
     void getLogin();
+
+    //Считываем баланс с файла
+    void readBalance();
 };
 
 #endif // FUNCS_H

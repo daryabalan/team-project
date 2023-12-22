@@ -6,3 +6,7 @@ ss << time(0);
 return ss.str();
 }
 
+void BonusSystem::readBalance() {
+
+}
+

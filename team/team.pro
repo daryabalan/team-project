@@ -7,7 +7,8 @@ SOURCES += main.cpp \
     login.cpp \
     bonussystem.cpp \
     client.cpp \
-    clientlist.cpp
+    clientlist.cpp \
+    operation.cpp
 
 include(deployment.pri)
 qtcAddDeployment()

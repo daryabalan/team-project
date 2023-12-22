@@ -22,6 +22,7 @@ void Client::generateCardNumber() {
 }
 
 
+
 void Client::saveToFile() {
     std::ofstream file("D:\\Github rep\\Project\\team-project\\clients.txt", std::ios::app); // Указываем полный путь к файлу
     if (file.is_open()) {

@@ -15,6 +15,13 @@ public:
     void saveToFile();
     void setFullName(const std::string& name);
     void setPhoneNumber(const std::string& number);
+    std::string getCardNumber() const {
+           return cardNumber;
+       }
+
+       float getBalance() const {
+           return balance;
+       }
     //void setBalance(float& balance);
 };
 #endif
