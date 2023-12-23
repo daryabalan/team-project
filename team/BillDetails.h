@@ -7,6 +7,7 @@
 #include "Client.h"
 #include <string>
 #include <numeric> //для accumulate()
+#include <map>
 using namespace std;
 
 ///////////////////класс BillDetails(детализация счёта)////////////////////////
@@ -14,11 +15,14 @@ using namespace std;
 class BillDetails
 {
 private:
+std::map<std::string, BillDetails> clients;
     vector<Operation> operations; // Вектор операций
-    vector<Client> clients; //Вектор клиентов
+    //vector<Client> clients; //Вектор клиентов
 public:
+
+    float balance;
     // Конструктор, принимающий номер карты, кредит, дебет и баланс
-    BillDetails(string card, int credit, int debit, int balance);
+   // BillDetails(string card, int credit, int debit, int balance);
 
     // Метод для получения даты операции
     tm getDate();

@@ -21,6 +21,9 @@ void Client::generateCardNumber() {
     cardNumber = ss.str();
 }
 
+std::string Client::getCardNumber() const {
+        return cardNumber;
+    }
 
 void Client::saveToFile() {
     std::ofstream file("C:\\TeamProgect\\clients.txt", std::ios::app); // Указываем полный путь к файлу
