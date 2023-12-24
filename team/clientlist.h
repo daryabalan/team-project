@@ -16,8 +16,6 @@ private:
 vector<Client> clients; // Вектор для хранения клиентов
 public:
 
-    // Деструктор
-    ~ClientList();
 
     // Метод для добавления нового клиента в список
     void addClient(Client newClient);
