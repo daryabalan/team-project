@@ -64,7 +64,7 @@ void BonusSystem::findClientByNumberAndAddBonus(const std::string& phoneNumber, 
                 std::cout << "Client data has been updated in clients.txt\n";
 
                 // Добавляем данные в файл clients_with_bonus.txt
-                std::ofstream bonusFile("C:\\TeamProgect\\clients_with_bonus.txt", std::ios::app);
+                std::ofstream bonusFile("C:\\TeamProgect\\ClientsWithBonus.txt", std::ios::app);
                 if (bonusFile.is_open()) {
                     bonusFile << "Full Name: " << fullName << "\n";
                     bonusFile << "Phone Number: " << phoneNum << "\n";
