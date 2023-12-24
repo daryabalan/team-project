@@ -15,12 +15,9 @@ class ClientList
 private:
 vector<Client> clients; // Вектор для хранения клиентов
 public:
-
-
+void viewAllClientsData();
+void viewOperationsByPhoneNumber(const std::string& phoneNumber);
     // Метод для добавления нового клиента в список
     void addClient(Client newClient);
-
-    // Метод для удаления клиента из списка по номеру карты
-    void deleteClientByCardNumber(string cardNumber);
 };
 #endif // FUNCS_H

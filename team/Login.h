@@ -15,10 +15,8 @@ class Login
 private:
 string admin_id;//логин
 string password;//пароль
-BonusSystem* sysref;
 public:
 void showLoginMenu();//метод проверки ввода пароля
 void ShowMainScreen();//метод обращения к меню бонусной системы
-void SetSysRef(BonusSystem* ref);
 };
 #endif // FUNCS_H

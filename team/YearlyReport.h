@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include "operation.h"
 #include <string>
 #include <numeric> //для accumulate()
 using namespace std;
@@ -14,20 +13,15 @@ using namespace std;
 class YearlyReport
 {
 private:
-    vector<Operation> operations; // Вектор операций
     int totalCreditPoints; // Общее количество начисленных бонусных баллов
     int totalDebitPoints; // Общее количество израсходованных бонусных баллов
     int yearEndBalance; // Баланс на конец года
 
 public:
     // Конструктор, принимающий номер карты, кредит, дебет и баланс
-    YearlyReport(string card, int credit, int debit, int balance);
-
-    // Метод для получения номера карты
-    string getCardNumber();
-
-    // Метод для установки номера карты
-    void setCardNumber(string card);
+    YearlyReport() {
+            // Инициализация по умолчанию
+        }
 
     // Метод для получения общего количества начисленных бонусных баллов
     int getTotalCreditPoints();
@@ -46,5 +40,7 @@ public:
 
     // Метод для установки баланса на конец года
     void setYearEndBalance(int balance);
+
+    void summarizeClientBonuses(const std::string& phoneNumber);
 };
 #endif // FUNCS_H

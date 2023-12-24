@@ -1,0 +1,8 @@
+Full Name: l l
+Phone Number: 123
+Adding bonus: 600
+--------------------------
+Full Name: l l
+Phone Number: 123
+Deducted bonus: 300
+--------------------------
